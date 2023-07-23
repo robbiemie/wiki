@@ -2,10 +2,24 @@
   <div class="wiki-home-page2 section" :style="{
     opacity
   }">
-  <span style="--i:1">N</span>
-  <span style="--i:2">I</span>
-  <span style="--i:3">N</span>
-  <span style="--i:4">I</span>
+  <div>
+    <span style="--i:1">N</span>
+    <span style="--i:2">I</span>
+    <span style="--i:3">N</span>
+    <span style="--i:4">I</span>
+  </div>
+  <div style="marginTop: 40px;">
+    <span style="--i:1">L</span>
+    <span style="--i:2">O</span>
+    <span style="--i:3">V</span>
+    <span style="--i:4">E</span>
+    <span>&</span>
+    <span style="--i:1">P</span>
+    <span style="--i:2">E</span>
+    <span style="--i:3">A</span>
+    <span style="--i:4">C</span>
+    <span style="--i:1">E</span>
+  </div>
   </div>
 </template>
 
@@ -58,6 +72,7 @@ export default {
 
 .wiki-home-page2 {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: #f5f5f5;
@@ -87,6 +102,18 @@ export default {
       color:  rgb(205, 232, 243);;
     }
     &:nth-child(4) {
+      color: rgb(252, 232, 197);;
+    }
+    &:nth-child(5) {
+      color: rgb(249, 205, 200);
+    }
+    &:nth-child(6) {
+      color: rgb(208, 240, 223);;
+    }
+    &:nth-child(7) {
+      color:  rgb(205, 232, 243);;
+    }
+    &:nth-child(8) {
       color: rgb(252, 232, 197);;
     }
   }
