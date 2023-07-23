@@ -2,11 +2,16 @@
   <div class="wiki-home-page2 section" :style="{
     opacity
   }">
+  <span style="--i:1">N</span>
+  <span style="--i:2">I</span>
+  <span style="--i:3">N</span>
+  <span style="--i:4">I</span>
   </div>
 </template>
 
 <script>
 import {  ref } from 'vue'
+
 export default {
   name: 'section2',
   setup() {
@@ -46,7 +51,53 @@ export default {
 }
 </script>
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;800&display=swap');
+
+
 .wiki-home-page2 {
-  background-color: #182645;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f5f5;
+
+  span {
+    font-family: "Lilita One", cursive;
+    position: relative;
+    display: inline-block;
+    color: #ecc4d1;
+    text-transform: uppercase;
+    font-size: 64px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    animation: waviy 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+    transform-style: preserve-3d;
+    text-transform: uppercase;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 43.01, 1);
+    transform-origin: 21.7578px 43.5px -12.65px;
+    &:nth-child(1) {
+      color: rgb(249, 205, 200);
+    }
+    &:nth-child(2) {
+      color: rgb(208, 240, 223);;
+    }
+    &:nth-child(3) {
+      color:  rgb(205, 232, 243);;
+    }
+    &:nth-child(4) {
+      color: rgb(252, 232, 197);;
+    }
+  }
+  @keyframes waviy {
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-20px)
+    }
+  }
 }
+
 </style>

@@ -54,6 +54,7 @@
 
 <style lang="scss">
 .wiki-home-page1 {
+  position: relative;
   .wiki-home-top {
     position: relative;
     height: 50%;
@@ -70,7 +71,6 @@
       top: 0;
       width: 100%;
       height: 100%;
-      overflow: hidden;
     }
     .ocean { 
       height: 5%;
