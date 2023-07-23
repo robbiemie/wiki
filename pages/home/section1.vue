@@ -30,7 +30,6 @@
       const handleScroll = () => {
         const scrollPercentage = calculateScrollVisibility('wiki-home-page1') || 0;
         opacity.value = scrollPercentage.toFixed(2)
-        console.log('xxxxx', opacity.value)
       }
       document.addEventListener("scroll", handleScroll)
       const renderPoint = () => {
