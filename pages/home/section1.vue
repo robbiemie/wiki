@@ -1,5 +1,7 @@
 <template>
-  <div class="wiki-home-page1 section">
+  <div class="wiki-home-page1 section" :style="{
+    opacity
+  }">
     <div class="wiki-home-top">
       <SvgText/>
     </div>
@@ -16,12 +18,21 @@
 <script>
   import { defineComponent, onMounted } from 'vue'
   import SvgText from '../../components/svg/text'
+  import {calculateScrollVisibility} from '../../common'
 
   export default defineComponent({
     components: {
       SvgText,
     },
     setup() {
+      const opacity =ref(0)
+
+      const handleScroll = () => {
+        const scrollPercentage = calculateScrollVisibility('wiki-home-page1') || 0;
+        opacity.value = scrollPercentage.toFixed(2)
+        console.log('xxxxx', opacity.value)
+      }
+      document.addEventListener("scroll", handleScroll)
       const renderPoint = () => {
         const container = document.querySelector('.wiki-home-stars')
         function lines() {
@@ -46,7 +57,11 @@
       }
       onMounted(() => {
         renderPoint()
+        handleScroll()
       })
+      return {
+        opacity
+      }
     }
   })
 
