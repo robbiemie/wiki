@@ -3,7 +3,6 @@
     <section1/>
     <section2/>
     <section1/>
-    <section2/>
     <section1/>
   </div>
 </template>
@@ -37,7 +36,6 @@ export default defineComponent({
 <style lang="scss">
 .wiki-home {
   position: relative;
-  height: 100%;
   .section {
     height: 100vh;
   }

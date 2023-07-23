@@ -1,9 +1,10 @@
 <template>
-  <div class="wike-home-page1 section">
+  <div class="wiki-home-page1 section">
     <div class="wiki-home-top">
       <SvgText/>
     </div>
     <div class="wiki-home-bottom">
+      <div class="wiki-home-stars"></div>
       <div class="ocean">
         <div  class="wave"/>
         <div  class="wave"/>
@@ -22,7 +23,7 @@
     },
     setup() {
       const renderPoint = () => {
-        const container = document.querySelector('.wiki-home-bottom')
+        const container = document.querySelector('.wiki-home-stars')
         function lines() {
           let sizeW = Math.random() * 12;
           let duration = Math.random() * 3;
@@ -52,7 +53,7 @@
 </script>
 
 <style lang="scss">
-.wike-home-page1 {
+.wiki-home-page1 {
   .wiki-home-top {
     position: relative;
     height: 50%;
@@ -63,6 +64,14 @@
     position: relative;
     height: 50%;
     background-color: #182645;
+    .wiki-home-stars {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
     .ocean { 
       height: 5%;
       width:100%;
