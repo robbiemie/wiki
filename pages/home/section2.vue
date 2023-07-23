@@ -1,10 +1,17 @@
 <template>
-  <div class="section"></div>
+  <div class="section">
+  </div>
 </template>
 
 <script>
+import { onMounted } from 'vue'
 export default {
-  name: 'x'  
+  name: 'section2',
+  setup() {
+    onMounted(() => {
+    })
+
+  }
 }
 </script>
 <style lang="scss">

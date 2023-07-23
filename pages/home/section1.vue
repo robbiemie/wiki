@@ -4,17 +4,21 @@
       <SvgText/>
     </div>
     <div class="wiki-home-bottom">
+      <div class="ocean">
+        <div  class="wave"/>
+        <div  class="wave"/>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
   import { defineComponent, onMounted } from 'vue'
-  import SvgText from '../../components/svg/SvgText.vue'
+  import SvgText from '../../components/svg/text'
 
   export default defineComponent({
     components: {
-      SvgText
+      SvgText,
     },
     setup() {
       const renderPoint = () => {
@@ -36,9 +40,10 @@
         setInterval(function () {
           lines();
         }, 200);
+        return {
+        }
       }
       onMounted(() => {
-        console.log('xxxxx')
         renderPoint()
       })
     }
@@ -55,8 +60,52 @@
     z-index: 101;
   }
   .wiki-home-bottom {
+    position: relative;
     height: 50%;
-    background-color: #000;
+    background-color: #182645;
+    .ocean { 
+      height: 5%;
+      width:100%;
+      position:absolute;
+      top:0;
+      left:0;
+      background: #182645;
+      z-index: 102;
+    }
+    
+    .wave {
+      background: url(/img/wave.svg) repeat-x; 
+      position: absolute;
+      top: -120px;
+      width: 6400px;
+      height: 120px;
+      animation: wave 4s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+      transform: translate3d(0, 0, 0);
+    }
+    
+    .wave:nth-of-type(2) {
+      top: -95px;
+      animation: wave 4s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 4s ease -1.25s infinite;
+      opacity: 1;
+    }
+    
+    @keyframes wave {
+      0% {
+        margin-left: 0;
+      }
+      100% {
+        margin-left: -1600px;
+      }
+    }
+    
+    @keyframes swell {
+      0%, 100% {
+        transform: translate3d(0,-25px,0);
+      }
+      50% {
+        transform: translate3d(0,5px,0);
+      }
+    }
   }
   .circle {
     position: absolute;

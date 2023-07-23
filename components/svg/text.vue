@@ -50,7 +50,7 @@
 </template>
 
 <script>
-import SvgRobbie from './SvgRobbie'
+import SvgRobbie from './robbie'
 
 export default {
   name: 'svgtext',
