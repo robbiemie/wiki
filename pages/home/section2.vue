@@ -1,5 +1,5 @@
 <template>
-  <div class="section">
+  <div class="wike-home-page1 section">
   </div>
 </template>
 
