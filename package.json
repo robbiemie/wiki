@@ -1,21 +1,30 @@
 {
-  "name": "nuxt-app",
-  "private": true,
+  "name": "robbiemie.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "nuxt dev -o",
-    "build": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "devDependencies": {
-    "@nuxt/devtools": "latest",
-    "@types/node": "^18.16.19",
-    "nuxt": "^3.6.5",
-    "sass": "^1.64.1",
-    "sass-loader": "^13.3.2"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robbiemie/robbiemie.github.io.git"
   },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robbiemie/robbiemie.github.io/issues"
+  },
+  "homepage": "https://github.com/robbiemie/robbiemie.github.io#readme",
   "dependencies": {
-    "gsap": "^3.12.2",
-    "swiper": "^10.0.4"
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.2",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "typescript": "^5.7.2"
   }
 }
